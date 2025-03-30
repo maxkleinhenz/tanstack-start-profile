@@ -2,14 +2,18 @@
 import type { ReactNode } from "react";
 import {
   Outlet,
-  createRootRoute,
+  createRootRouteWithContext,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
 
 import appCss from "@/styles/app.css?url";
+import { NotFound } from "@/components/NotFound";
+import { QueryClient } from "@tanstack/react-query";
 
-export const Route = createRootRoute({
+export const Route = createRootRouteWithContext<{
+  queryClient: QueryClient;
+}>()({
   head: () => ({
     meta: [
       {
@@ -30,6 +34,7 @@ export const Route = createRootRoute({
       },
     ],
   }),
+  notFoundComponent: () => <NotFound />,
   component: RootComponent,
 });
 
