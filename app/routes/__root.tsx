@@ -63,7 +63,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
               <h1 className="text-xl">Account & Settings</h1>
             </header>
 
-            <main className="flex flex-1 flex-col">
+            <main className="flex flex-1 flex-col p-4 ">
               <div className="flex-1">{children}</div>
             </main>
             <footer className="flex bg-slate-100 px-4 py-2 border-slate-200 border-t">

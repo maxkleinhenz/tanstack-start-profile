@@ -1,4 +1,13 @@
-import { Hand, House, X } from "lucide-react";
+import {
+  AppWindow,
+  BookOpenCheck,
+  CircleHelp,
+  KeyRound,
+  MailOpen,
+  UserRound,
+  UsersRound,
+  X,
+} from "lucide-react";
 
 import {
   Sidebar,
@@ -34,22 +43,76 @@ export function AppSidebar() {
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel>Account</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild onClick={() => setOpenMobile(false)}>
-                  <Link to={"/"}>
-                    <House />
-                    <span>Home</span>
+                  <Link to={"/profile"}>
+                    <UserRound />
+                    <span>Profile</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild onClick={() => setOpenMobile(false)}>
                   <Link to={"/hello"}>
-                    <Hand />
-                    <span>Hello</span>
+                    <KeyRound />
+                    <span>Api Keys</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+        <SidebarGroup>
+          <SidebarGroupLabel>Organization</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild onClick={() => setOpenMobile(false)}>
+                  <Link to={"/profile"}>
+                    <AppWindow />
+                    <span>My Apps</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild onClick={() => setOpenMobile(false)}>
+                  <Link to={"/profile"}>
+                    <UsersRound />
+                    <span>User Groups</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+        <SidebarGroup>
+          <SidebarGroupLabel>Contact & Help</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild onClick={() => setOpenMobile(false)}>
+                  <Link to={"/profile"}>
+                    <MailOpen />
+                    <span>Contact</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild onClick={() => setOpenMobile(false)}>
+                  <Link to={"/profile"}>
+                    <CircleHelp />
+                    <span>Help Desk</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild onClick={() => setOpenMobile(false)}>
+                  <Link to={"/profile"}>
+                    <BookOpenCheck />
+                    <span>Api Documentation</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
